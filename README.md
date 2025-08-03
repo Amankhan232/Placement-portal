@@ -9,7 +9,7 @@ A responsive and interactive **Placement Website** built using **HTML**, **CSS**
 
 - **HTML5** – Semantic and well-structured markup  
 - **CSS3** – Responsive layout, custom styles, animations  
-- **JavaScript (Vanilla)** – Interactive UI 
+- **JavaScript (Vanilla)** – Interactive UI .
 
 ---
 
