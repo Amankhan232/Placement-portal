@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EduConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduConnect</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="notes-pyq.html" class="nav-link">Notes & PYQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="placement-records.html" class="nav-link">Placement Records</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">Get in touch with us for any questions, suggestions, or support</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="hero-container">
+                <!-- Contact Form -->
+                <div class="hero-content">
+                    <h2 class="mb-2">Send us a Message</h2>
+                    <p class="mb-3">Have a question or suggestion? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                    
+                    <form class="upload-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="branch">Branch</label>
+                            <select id="branch" name="branch">
+                                <option value="">Select your branch</option>
+                                <option value="cse">Computer Science Engineering</option>
+                                <option value="ece">Electronics & Communication</option>
+                                <option value="me">Mechanical Engineering</option>
+                                <option value="ce">Civil Engineering</option>
+                                <option value="ee">Electrical Engineering</option>
+                                <option value="it">Information Technology</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="year">Academic Year</label>
+                            <select id="year" name="year">
+                                <option value="">Select your year</option>
+                                <option value="1">1st Year</option>
+                                <option value="2">2nd Year</option>
+                                <option value="3">3rd Year</option>
+                                <option value="4">4th Year</option>
+                                <option value="alumni">Alumni</option>
+                                <option value="faculty">Faculty</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Enter the subject of your message">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Enter your message here..." rows="6"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="hero-image">
+                    <div class="contact-info">
+                        <h3 class="mb-2">Get in Touch</h3>
+                        <p class="mb-3">We're here to help and answer any question you might have. We look forward to hearing from you.</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>educonnect.com</p>
+                                <p>support@educonnect.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+91 98765 43210</p>
+                                <p>+91 87654 32109</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Address</h4>
+                                <p>EduConnect Office</p>
+                                <p>College Campus, Room 101</p>
+                                <p>City, State - 123456</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Office Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section" style="background: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-question-circle"></i> How do I upload my notes?</h3>
+                    <p>Go to the Notes & PYQ page and click on "Upload Material". Fill in the required details and upload your file. Our team will review and approve it within 24 hours.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-question-circle"></i> Is the platform free to use?</h3>
+                    <p>Yes, EduConnect is completely free for all students. We believe in making quality educational resources accessible to everyone.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-question-circle"></i> How accurate is the placement data?</h3>
+                    <p>Our placement data is collected directly from students and verified by our team. We update the information regularly to ensure accuracy.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-question-circle"></i> Can I request specific study materials?</h3>
+                    <p>Absolutely! Use the contact form to request specific materials. We'll try our best to find and upload the resources you need.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-question-circle"></i> How do I report inappropriate content?</h3>
+                    <p>If you find any inappropriate or incorrect content, please contact us immediately through the contact form or email us directly.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-question-circle"></i> Can alumni contribute to the platform?</h3>
+                    <p>Yes! Alumni can share their placement experiences, interview tips, and study materials to help current students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Connect With Us</h2>
+                <p class="mb-3">Follow us on social media for updates, tips, and community discussions</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-telegram-plane"></i>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="content-section" style="background: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">Find Us</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Interactive Map</h3>
+                    <p>Our office is located in the college campus. Visit us during office hours for any assistance.</p>
+                    <button class="btn btn-primary">Get Directions</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>EduConnect</span>
+                    </div>
+                    <p>Empowering students with quality educational resources and placement guidance.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="notes-pyq.html">Notes & PYQ</a></li>
+                        <li><a href="placement-records.html">Placements</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Study Materials</a></li>
+                        <li><a href="#">Previous Papers</a></li>
+                        <li><a href="#">Placement Tips</a></li>
+                        <li><a href="#">Career Guidance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> educonnect.com</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> College Campus, City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EduConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

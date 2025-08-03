@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Records - EduConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduConnect</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="notes-pyq.html" class="nav-link">Notes & PYQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="placement-records.html" class="nav-link active">Placement Records</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Placement Records</h1>
+            <p class="page-subtitle">Comprehensive information about companies, job roles, and hiring processes</p>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">Placement Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">₹12.5L</div>
+                    <div class="stat-label">Average CTC</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">₹45L</div>
+                    <div class="stat-label">Highest CTC</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Companies Visited</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label for="filterCompanyType">Company Type</label>
+                    <select id="filterCompanyType" onchange="filterPlacements()">
+                        <option value="all">All Types</option>
+                        <option value="product">Product Based</option>
+                        <option value="service">Service Based</option>
+                        <option value="startup">Startup</option>
+                        <option value="mnc">MNC</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="filterRole">Job Role</label>
+                    <select id="filterRole" onchange="filterPlacements()">
+                        <option value="all">All Roles</option>
+                        <option value="sde">Software Developer</option>
+                        <option value="analyst">Business Analyst</option>
+                        <option value="consultant">Consultant</option>
+                        <option value="engineer">Engineer</option>
+                        <option value="intern">Intern</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="filterCTC">CTC Range</label>
+                    <select id="filterCTC" onchange="filterPlacements()">
+                        <option value="all">All Ranges</option>
+                        <option value="0-5">0-5 LPA</option>
+                        <option value="5-10">5-10 LPA</option>
+                        <option value="10-20">10-20 LPA</option>
+                        <option value="20+">20+ LPA</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="searchCompany">Search Company</label>
+                    <input type="text" id="searchCompany" placeholder="Search by company name" oninput="filterPlacements()">
+                </div>
+            </div>
+
+            <!-- Placement Records -->
+            <div id="placementGrid">
+                <!-- Google -->
+                <div class="placement-card" data-type="product" data-role="sde" data-ctc="45">
+                    <div class="company-header">
+                        <div class="company-logo">G</div>
+                        <div class="company-info">
+                            <h3>Google</h3>
+                            <p>Product Based • MNC</p>
+                        </div>
+                    </div>
+                    
+                    <div class="placement-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Job Role</div>
+                            <div class="detail-value">Software Development Engineer</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">CTC Package</div>
+                            <div class="detail-value">₹45,00,000 LPA</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Students Placed</div>
+                            <div class="detail-value">3 Students</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Eligible Branches</div>
+                            <div class="detail-value">CSE, IT, ECE</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">CGPA Criteria</div>
+                            <div class="detail-value">8.5+ CGPA</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Skills Required</div>
+                            <div class="detail-value">DSA, System Design, Java/Python</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <h4>Hiring Process:</h4>
+                        <ul class="mt-1">
+                            <li>Online Assessment (Coding + MCQs)</li>
+                            <li>Technical Interview Round 1</li>
+                            <li>Technical Interview Round 2</li>
+                            <li>HR Interview</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Microsoft -->
+                <div class="placement-card" data-type="product" data-role="sde" data-ctc="38">
+                    <div class="company-header">
+                        <div class="company-logo">M</div>
+                        <div class="company-info">
+                            <h3>Microsoft</h3>
+                            <p>Product Based • MNC</p>
+                        </div>
+                    </div>
+                    
+                    <div class="placement-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Job Role</div>
+                            <div class="detail-value">Software Engineer</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">CTC Package</div>
+                            <div class="detail-value">₹38,00,000 LPA</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Students Placed</div>
+                            <div class="detail-value">5 Students</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Eligible Branches</div>
+                            <div class="detail-value">CSE, IT, ECE, EE</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">CGPA Criteria</div>
+                            <div class="detail-value">8.0+ CGPA</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Skills Required</div>
+                            <div class="detail-value">C++, .NET, Azure, Problem Solving</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <h4>Hiring Process:</h4>
+                        <ul class="mt-1">
+                            <li>Online Coding Test</li>
+                            <li>Technical Interview (2 Rounds)</li>
+                            <li>Managerial Round</li>
+                            <li>HR Discussion</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TCS -->
+                <div class="placement-card" data-type="service" data-role="analyst" data-ctc="7">
+                    <div class="company-header">
+                        <div class="company-logo">T</div>
+                        <div class="company-info">
+                            <h3>Tata Consultancy Services</h3>
+                            <p>Service Based • MNC</p>
+                        </div>
+                    </div>
+                    
+                    <div class="placement-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Job Role</div>
+                            <div class="detail-value">Systems Engineer</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">CTC Package</div>
+                            <div class="detail-value">₹7,00,000 LPA</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Students Placed</div>
+                            <div class="detail-value">45 Students</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Eligible Branches</div>
+                            <div class="detail-value">All Branches</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">CGPA Criteria</div>
+                            <div class="detail-value">6.0+ CGPA</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Skills Required</div>
+                            <div class="detail-value">Programming, Communication, Aptitude</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <h4>Hiring Process:</h4>
+                        <ul class="mt-1">
+                            <li>Online Test (Aptitude + Technical)</li>
+                            <li>Technical Interview</li>
+                            <li>HR Interview</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Infosys -->
+                <div class="placement-card" data-type="service" data-role="sde" data-ctc="9">
+                    <div class="company-header">
+                        <div class="company-logo">I</div>
+                        <div class="company-info">
+                            <h3>Infosys</h3>
+                            <p>Service Based • MNC</p>
+                        </div>
+                    </div>
+                    
+                    <div class="placement-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Job Role</div>
+                            <div class="detail-value">Software Engineer Trainee</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">CTC Package</div>
+                            <div class="detail-value">₹9,00,000 LPA</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Students Placed</div>
+                            <div class="detail-value">38 Students</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Eligible Branches</div>
+                            <div class="detail-value">CSE, IT, ECE, EE</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">CGPA Criteria</div>
+                            <div class="detail-value">6.5+ CGPA</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Skills Required</div>
+                            <div class="detail-value">Java, SQL, Problem Solving</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <h4>Hiring Process:</h4>
+                        <ul class="mt-1">
+                            <li>Online Assessment</li>
+                            <li>Technical Interview</li>
+                            <li>HR Round</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Amazon -->
+                <div class="placement-card" data-type="product" data-role="sde" data-ctc="28">
+                    <div class="company-header">
+                        <div class="company-logo">A</div>
+                        <div class="company-info">
+                            <h3>Amazon</h3>
+                            <p>Product Based • MNC</p>
+                        </div>
+                    </div>
+                    
+                    <div class="placement-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Job Role</div>
+                            <div class="detail-value">Software Development Engineer I</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">CTC Package</div>
+                            <div class="detail-value">₹28,00,000 LPA</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Students Placed</div>
+                            <div class="detail-value">8 Students</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Eligible Branches</div>
+                            <div class="detail-value">CSE, IT, ECE</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">CGPA Criteria</div>
+                            <div class="detail-value">7.5+ CGPA</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Skills Required</div>
+                            <div class="detail-value">DSA, Java/C++, System Design</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <h4>Hiring Process:</h4>
+                        <ul class="mt-1">
+                            <li>Online Assessment (Coding + Debugging)</li>
+                            <li>Technical Interview Round 1</li>
+                            <li>Technical Interview Round 2</li>
+                            <li>Bar Raiser Round</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Wipro -->
+                <div class="placement-card" data-type="service" data-role="engineer" data-ctc="6">
+                    <div class="company-header">
+                        <div class="company-logo">W</div>
+                        <div class="company-info">
+                            <h3>Wipro</h3>
+                            <p>Service Based • MNC</p>
+                        </div>
+                    </div>
+                    
+                    <div class="placement-details">
+                        <div class="detail-item">
+                            <div class="detail-label">Job Role</div>
+                            <div class="detail-value">Project Engineer</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">CTC Package</div>
+                            <div class="detail-value">₹6,00,000 LPA</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Students Placed</div>
+                            <div class="detail-value">32 Students</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Eligible Branches</div>
+                            <div class="detail-value">All Branches</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">CGPA Criteria</div>
+                            <div class="detail-value">6.0+ CGPA</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">Skills Required</div>
+                            <div class="detail-value">Basic Programming, Aptitude</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <h4>Hiring Process:</h4>
+                        <ul class="mt-1">
+                            <li>Written Test (Aptitude + Technical)</li>
+                            <li>Technical Interview</li>
+                            <li>HR Interview</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="content-section" style="background: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">Placement Preparation Tips</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Master Data Structures</h3>
+                    <p>Focus on arrays, linked lists, trees, graphs, and dynamic programming. Practice coding problems daily.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Communication Skills</h3>
+                    <p>Develop strong verbal and written communication skills. Practice explaining technical concepts clearly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Build Projects</h3>
+                    <p>Create meaningful projects that showcase your skills. Include them in your resume and be ready to explain.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Time Management</h3>
+                    <p>Practice solving problems within time limits. Learn to prioritize and manage your time effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>EduConnect</span>
+                    </div>
+                    <p>Empowering students with quality educational resources and placement guidance.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="notes-pyq.html">Notes & PYQ</a></li>
+                        <li><a href="placement-records.html">Placements</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Study Materials</a></li>
+                        <li><a href="#">Previous Papers</a></li>
+                        <li><a href="#">Placement Tips</a></li>
+                        <li><a href="#">Career Guidance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> educonnect.com</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> College Campus, City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EduConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

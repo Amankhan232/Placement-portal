@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes & PYQ - EduConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>EduConnect</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="notes-pyq.html" class="nav-link active">Notes & PYQ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="placement-records.html" class="nav-link">Placement Records</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Notes & Previous Year Questions</h1>
+            <p class="page-subtitle">Access comprehensive study materials organized by branch and year</p>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="upload-section">
+                <h2><i class="fas fa-upload"></i> Contribute to the Community</h2>
+                <p class="mb-2">Help your fellow students by uploading your notes and PYQ papers</p>
+                <button class="btn btn-primary" onclick="toggleUploadForm()">Upload Material</button>
+                
+                <div id="uploadForm" class="upload-form hidden mt-3">
+                    <div class="form-group">
+                        <label for="materialType">Material Type</label>
+                        <select id="materialType" required>
+                            <option value="">Select Type</option>
+                            <option value="notes">Study Notes</option>
+                            <option value="pyq">Previous Year Question</option>
+                            <option value="assignment">Assignment</option>
+                            <option value="lab">Lab Manual</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="branch">Branch</label>
+                        <select id="branch" required>
+                            <option value="">Select Branch</option>
+                            <option value="cse">Computer Science Engineering</option>
+                            <option value="ece">Electronics & Communication</option>
+                            <option value="me">Mechanical Engineering</option>
+                            <option value="ce">Civil Engineering</option>
+                            <option value="ee">Electrical Engineering</option>
+                            <option value="it">Information Technology</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="year">Academic Year</label>
+                        <select id="year" required>
+                            <option value="">Select Year</option>
+                            <option value="1">1st Year</option>
+                            <option value="2">2nd Year</option>
+                            <option value="3">3rd Year</option>
+                            <option value="4">4th Year</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Enter subject name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" placeholder="Enter material title" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" placeholder="Brief description of the material"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="file">Upload File</label>
+                        <input type="file" id="file" accept=".pdf,.doc,.docx,.ppt,.pptx" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="uploaderName">Your Name</label>
+                        <input type="text" id="uploaderName" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" onclick="submitUpload()">Upload Material</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter and Search Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label for="filterType">Type</label>
+                    <select id="filterType" onchange="filterResources()">
+                        <option value="all">All Types</option>
+                        <option value="notes">Notes</option>
+                        <option value="pyq">PYQ</option>
+                        <option value="assignment">Assignments</option>
+                        <option value="lab">Lab Manuals</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="filterBranch">Branch</label>
+                    <select id="filterBranch" onchange="filterResources()">
+                        <option value="all">All Branches</option>
+                        <option value="cse">CSE</option>
+                        <option value="ece">ECE</option>
+                        <option value="me">ME</option>
+                        <option value="ce">CE</option>
+                        <option value="ee">EE</option>
+                        <option value="it">IT</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="filterYear">Year</label>
+                    <select id="filterYear" onchange="filterResources()">
+                        <option value="all">All Years</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="searchInput">Search</label>
+                    <input type="text" id="searchInput" placeholder="Search by subject or title" oninput="filterResources()">
+                </div>
+            </div>
+
+            <!-- Resources Grid -->
+            <div class="resource-grid" id="resourceGrid">
+                <!-- Sample Resources -->
+                <div class="resource-card" data-type="notes" data-branch="cse" data-year="3" data-subject="data structures">
+                    <div class="resource-title">Data Structures Complete Notes</div>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-book"></i> Notes</span>
+                        <span><i class="fas fa-code"></i> CSE</span>
+                        <span><i class="fas fa-calendar"></i> 3rd Year</span>
+                        <span><i class="fas fa-download"></i> 245 downloads</span>
+                    </div>
+                    <p class="mb-2">Comprehensive notes covering all topics in Data Structures including arrays, linked lists, trees, and graphs.</p>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary btn-small"><i class="fas fa-download"></i> Download</button>
+                        <button class="btn btn-secondary btn-small"><i class="fas fa-eye"></i> Preview</button>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-type="pyq" data-branch="cse" data-year="2" data-subject="operating systems">
+                    <div class="resource-title">Operating Systems PYQ 2023</div>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-file-alt"></i> PYQ</span>
+                        <span><i class="fas fa-code"></i> CSE</span>
+                        <span><i class="fas fa-calendar"></i> 2nd Year</span>
+                        <span><i class="fas fa-download"></i> 189 downloads</span>
+                    </div>
+                    <p class="mb-2">Previous year question paper for Operating Systems with detailed solutions and marking scheme.</p>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary btn-small"><i class="fas fa-download"></i> Download</button>
+                        <button class="btn btn-secondary btn-small"><i class="fas fa-eye"></i> Preview</button>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-type="notes" data-branch="ece" data-year="2" data-subject="digital electronics">
+                    <div class="resource-title">Digital Electronics Handwritten Notes</div>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-book"></i> Notes</span>
+                        <span><i class="fas fa-microchip"></i> ECE</span>
+                        <span><i class="fas fa-calendar"></i> 2nd Year</span>
+                        <span><i class="fas fa-download"></i> 156 downloads</span>
+                    </div>
+                    <p class="mb-2">Clear handwritten notes on digital electronics covering Boolean algebra, logic gates, and sequential circuits.</p>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary btn-small"><i class="fas fa-download"></i> Download</button>
+                        <button class="btn btn-secondary btn-small"><i class="fas fa-eye"></i> Preview</button>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-type="pyq" data-branch="me" data-year="3" data-subject="thermodynamics">
+                    <div class="resource-title">Thermodynamics PYQ Collection</div>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-file-alt"></i> PYQ</span>
+                        <span><i class="fas fa-cog"></i> ME</span>
+                        <span><i class="fas fa-calendar"></i> 3rd Year</span>
+                        <span><i class="fas fa-download"></i> 203 downloads</span>
+                    </div>
+                    <p class="mb-2">Collection of previous year questions from 2020-2023 with solved examples and important formulas.</p>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary btn-small"><i class="fas fa-download"></i> Download</button>
+                        <button class="btn btn-secondary btn-small"><i class="fas fa-eye"></i> Preview</button>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-type="lab" data-branch="cse" data-year="2" data-subject="database management">
+                    <div class="resource-title">DBMS Lab Manual with Queries</div>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-flask"></i> Lab Manual</span>
+                        <span><i class="fas fa-code"></i> CSE</span>
+                        <span><i class="fas fa-calendar"></i> 2nd Year</span>
+                        <span><i class="fas fa-download"></i> 178 downloads</span>
+                    </div>
+                    <p class="mb-2">Complete lab manual with SQL queries, procedures, and practical exercises for database management.</p>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary btn-small"><i class="fas fa-download"></i> Download</button>
+                        <button class="btn btn-secondary btn-small"><i class="fas fa-eye"></i> Preview</button>
+                    </div>
+                </div>
+
+                <div class="resource-card" data-type="assignment" data-branch="it" data-year="1" data-subject="programming fundamentals">
+                    <div class="resource-title">C Programming Assignments</div>
+                    <div class="resource-meta">
+                        <span><i class="fas fa-tasks"></i> Assignment</span>
+                        <span><i class="fas fa-laptop-code"></i> IT</span>
+                        <span><i class="fas fa-calendar"></i> 1st Year</span>
+                        <span><i class="fas fa-download"></i> 134 downloads</span>
+                    </div>
+                    <p class="mb-2">Collection of C programming assignments with solutions covering loops, arrays, functions, and pointers.</p>
+                    <div class="resource-actions">
+                        <button class="btn btn-primary btn-small"><i class="fas fa-download"></i> Download</button>
+                        <button class="btn btn-secondary btn-small"><i class="fas fa-eye"></i> Preview</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>EduConnect</span>
+                    </div>
+                    <p>Empowering students with quality educational resources and placement guidance.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="notes-pyq.html">Notes & PYQ</a></li>
+                        <li><a href="placement-records.html">Placements</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Study Materials</a></li>
+                        <li><a href="#">Previous Papers</a></li>
+                        <li><a href="#">Placement Tips</a></li>
+                        <li><a href="#">Career Guidance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> educonnect.com</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> College Campus, City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EduConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
